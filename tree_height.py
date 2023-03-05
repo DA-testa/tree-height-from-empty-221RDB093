@@ -34,9 +34,17 @@ def compute_height(n, parents):
 
 def main():
     # implement input form keyboard and from files
-    n = int(input())
-    parents = list(map(int, input().split()))
-    print(compute_height(n, parents))
+    letter = input()
+    if 'I' in letter:
+        n = int(input())
+        parents = list(map(int, input().split()))
+        print(compute_height(n, parents))
+    elif 'F' in letter:
+        file = input()
+        file = ("test/" + file)
+        if 'a' not in file:
+            with open(file, 'r') as file:
+                return file.read()
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
