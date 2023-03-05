@@ -44,7 +44,7 @@ def main():
         file = ("test/" + file)
         if 'a' not in file:
             with open(file, 'r') as f:
-                lines = f.readLines()
+                lines = f.readlines()
                 n = int(lines[0])
                 parents = lines[1].split()
                 print(compute_height(n, parents))
