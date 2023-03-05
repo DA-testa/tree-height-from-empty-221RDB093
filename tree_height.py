@@ -46,7 +46,7 @@ def main():
             with open(file, 'r') as f:
                 lines = f.readlines()
                 n = int(lines[0])
-                parents = lines[1].split()
+                parents = list(map(int, lines[1].split()))
                 print(compute_height(n, parents))
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
