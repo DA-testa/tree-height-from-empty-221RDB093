@@ -43,8 +43,11 @@ def main():
         file = input()
         file = ("test/" + file)
         if 'a' not in file:
-            with open(file, 'r') as file:
-                return file.read()
+            with open(file, 'r') as f:
+                lines = f.readLines()
+                n = int(lines[0])
+                parents = lines[1].split()
+                print(compute_height(n, parents))
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
